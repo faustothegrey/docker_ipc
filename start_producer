@@ -1,0 +1,5 @@
+docker rm -fv ipcqueue_producer  
+docker build -t python-docker .
+docker run -d --name ipcqueue_producer --ipc shareable python-docker producer
+
+

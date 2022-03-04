@@ -1,0 +1,5 @@
+docker rm -fv ipcqueue_consumer  
+docker build -t python-docker .
+docker run -d --name ipcqueue_consumer --ipc container:ipcqueue_producer python-docker consumer
+
+

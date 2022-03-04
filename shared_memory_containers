@@ -1,0 +1,5 @@
+docker rm -fv ch6_ipc_producer ch6_ipc_consumer
+docker run -d --name ch6_ipc_producer --ipc shareable allingeek/ch6_ipc -producer
+docker run -d --name ch6_ipc_consumer --ipc container:ch6_ipc_producer allingeek/ch6_ipc -consumer
+docker logs ch6_ipc_consumer
+
